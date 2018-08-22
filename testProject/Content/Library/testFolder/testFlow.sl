@@ -2,40 +2,28 @@ namespace: testFolder
 flow:
   name: testFlow
   workflow:
-    - sleep_1:
-        do:
-          io.cloudslang.base.utils.sleep:
-            - seconds: '5'
-        publish:
-          - customInput: '5'
+    - Sleep:
+        do_external:
+          d1bbf441-824a-450e-afae-2ddec0e0f35e:
+            - seconds: '3'
         navigate:
-          - SUCCESS: sleep
-          - FAILURE: on_failure
-    - sleep:
-        do:
-          io.cloudslang.base.utils.sleep:
-            - seconds: '${customInput}'
-        navigate:
-          - SUCCESS: SUCCESS
-          - FAILURE: on_failure
+          - success: SUCCESS
+          - failure: on_failure
   results:
     - FAILURE
     - SUCCESS
 extensions:
   graph:
     steps:
-      sleep_1:
-        x: 100
-        y: 150
-      sleep:
-        x: 400
-        y: 150
+      Sleep:
+        x: 125
+        y: 196
         navigate:
-          4ad40f4a-182b-ec60-9438-8f2aa803bba5:
-            targetId: 880b9a5d-33af-fce0-92c1-6f661357ec9d
-            port: SUCCESS
+          2358d9cf-4ecd-5f40-60ae-85f5f2c2e4f5:
+            targetId: 8d3da66b-9054-97b9-c3a3-0adc1a78ed4d
+            port: success
     results:
       SUCCESS:
-        880b9a5d-33af-fce0-92c1-6f661357ec9d:
-          x: 700
-          y: 150
+        8d3da66b-9054-97b9-c3a3-0adc1a78ed4d:
+          x: 463
+          y: 177
