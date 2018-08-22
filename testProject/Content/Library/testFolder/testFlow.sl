@@ -5,7 +5,7 @@ flow:
     - Sleep:
         do_external:
           d1bbf441-824a-450e-afae-2ddec0e0f35e:
-            - seconds: '3'
+            - seconds: '5'
         navigate:
           - success: SUCCESS
           - failure: on_failure
