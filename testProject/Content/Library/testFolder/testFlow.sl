@@ -25,5 +25,5 @@ extensions:
     results:
       SUCCESS:
         8d3da66b-9054-97b9-c3a3-0adc1a78ed4d:
-          x: 463
-          y: 177
+          x: 870
+          y: 382
